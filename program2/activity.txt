@@ -1,0 +1,84 @@
+
+2. List View
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    ListView myList ;
+    String countryList[] ;
+
+    myList = findViewById(R.id.list) ;
+    countryList = getResources().getStringArray(R.array.Country) ;
+
+    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+            R.layout.support_simple_spinner_dropdown_item, countryList);
+
+    myList.setAdapter(arrayAdapter);
+}
+
+
+<ListView
+    android:id="@+id/list"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginBottom="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+
+
+<string-array name="Country">
+    <item>India</item>
+    <item>Zambia</item>
+    <item>USA</item>
+    <item>Myanmar</item>
+    <item>Germany</item>
+</string-array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Web View
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    WebView wv = findViewById(R.id.web);
+    wv.loadUrl("https://github.com/rajprem4214");
+}
+
+<WebView
+    android:id="@+id/web"
+    android:layout_width="376dp"
+    android:layout_height="592dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginBottom="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.711"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.394" />
